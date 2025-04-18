@@ -1,6 +1,6 @@
 {
   home.shellAliases = {
-    la = "ls -la"
-    ".." = "cd .."
+    la = "ls -la";
+    ".." = "cd ..";
   };
 }
