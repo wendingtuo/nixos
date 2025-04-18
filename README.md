@@ -20,3 +20,5 @@ git add .
 sudo nixos-rebuild switch --flake .
 home-manager switch --flake .
 ```
+
+Credit to `VelHRH/nixos-config` for the inspiration and structure
