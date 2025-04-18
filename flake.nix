@@ -28,7 +28,7 @@
         }
       ];
 
-      makeSystem = { hotname, stateVersion }: lib.nixosSystem {
+      makeSystem = { hostname, stateVersion }: lib.nixosSystem {
         system = system;
         specialArgs = {
           inherit inputs stateVersion hostname user;
