@@ -48,8 +48,8 @@
         }
       ) {} hosts;
 
-      homeConfigurations.$(user) = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.$(system);
+      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {
           inherit inputs homeStateVersion user;
         };
