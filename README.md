@@ -1,4 +1,4 @@
-After NixOS installation, in your `~/` directory:
+After NixOS installation, in your `~` directory:
 
 1. Copy config:
 ```
