@@ -27,12 +27,12 @@
             ./hosts/default/configuration.nix 
             ];
         };
-        workvm = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./hosts/workvm/configuration.nix
-          ];
-        };
+        # workvm = lib.nixosSystem {
+        #   inherit system;
+        #   modules = [
+        #     ./hosts/workvm/configuration.nix
+        #   ];
+        # };
       };
       homeConfigurations = {
         blake = home-manager.lib.homeManagerConfiguration {
