@@ -19,26 +19,44 @@
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      nixosConfigurations = {
-        nixos = lib.nixosSystem {
-          inherit system;
-          modules = [ 
-            ./hosts/default/configuration.nix 
-            ];
+      homeStateVersion = "24.11";
+      user = "blake";
+      hosts = [
+        {
+          hostname = "nixos";
+          stateVersion = "24.11";
+        }
+      ];
+
+      makeSystem = { hotname, stateVersion }: lib.nixosSystem {
+        system = system;
+        specialArgs = {
+          inherit inputs stateVersion hostname user;
         };
-        # workvm = lib.nixosSystem {
-        #   inherit system;
-        #   modules = [
-        #     ./hosts/workvm/configuration.nix
-        #   ];
-        # };
+
+        modules = [
+          ./hosts/${hostname}/configuration.nix
+        ];
       };
-      homeConfigurations = {
-        blake = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [ ./hosts/default/home.nix ];
+
+    in {
+      nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
+        configs // {
+          "${host.hostname}" = makeSystem {
+            inherit (host) hostname stateVersion;
+          };
+        }
+      ) {} hosts;
+
+      homeConfigurations.$(user) = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.$(system);
+        extraSpecialArgs = {
+          inherit inputs homeStateVersion user;
         };
+
+        modules = [
+          ./home-manager/home.nix
+        ];
       };
     };
 }
