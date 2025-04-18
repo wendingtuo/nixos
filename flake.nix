@@ -11,13 +11,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixd.url = "github:nix-community/nixd";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixd, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
       homeStateVersion = "24.11";
       user = "blake";
@@ -28,7 +26,7 @@
         }
       ];
 
-      makeSystem = { hostname, stateVersion }: lib.nixosSystem {
+      makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
         system = system;
         specialArgs = {
           inherit inputs stateVersion hostname user;
