@@ -22,6 +22,12 @@ in
     tmux
     zellij
 
+    # CLI Utilities
+    bottom
+    ffmpeg
+    imagemagick
+    neofetch
+
     # GUIs
     firefox
     vscodium
