@@ -18,7 +18,7 @@
 
   system.fsPackages = [ pkgs.open-vm-tools ];
 
-  fileSystems."/home/share" = {
+  fileSystems."/mnt" = {
     device = ".host:/";
     fsType = "fuse./run/current-system/sw/bin/vmhgfs-fuse";
     options = ["umask=22" "uid=1000" "gid=100" "allow_other" "defaults" "auto_unmount" "nofail"];
