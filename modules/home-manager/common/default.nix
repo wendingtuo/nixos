@@ -5,15 +5,15 @@
   ...
 }: {
   imports = [
-    ../programs/bottom
-    ../programs/btop
-    ../programs/fastfetch
-    ../programs/flameshot
-    ../programs/fzf
-    ../programs/git
-    ../programs/starship
-    ../programs/tmux
-    ../programs/zsh
+    # ../programs/bottom
+    # ../programs/btop
+    # ../programs/fastfetch
+    # ../programs/flameshot
+    # ../programs/fzf
+     ../programs/git
+    # ../programs/starship
+    # ../programs/tmux
+    # ../programs/zsh
   ];
 
   # Nixpkgs configuration
@@ -36,21 +36,17 @@
   # Ensure common packages are installed
   home.packages = with pkgs;
     [
-      anki-bin
-      awscli2
-      dig
-      du-dust
-      eza
-      fd
-      jq
+      dig # dns lookup util
+      du-dust # rust based disk util
+      eza # alias to ls
+      fd # alternative to find
+      jq # query against json
       kubectl
-      lazydocker
-      nh
-      openconnect
+      lazydocker # TUI for docker
+      nh # customizations available
       pipenv
       python3
-      ripgrep
-      terraform
+      ripgrep # rg for recursive file content search
       vscodium
     ]
     ++ lib.optionals stdenv.isDarwin [
@@ -62,7 +58,7 @@
     ++ lib.optionals (!stdenv.isDarwin) [
       pavucontrol
       pulseaudio
-      tesseract
+      tesseract #OCR engine
       unzip
       wl-clipboard
     ];
