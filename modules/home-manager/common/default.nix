@@ -15,6 +15,7 @@
     ../programs/nextcloud.nix
     # ../programs/spicetify.nix
     # ../programs/starship.nix
+    ../programs/syncthing.nix
     # ../programs/tmux.nix
     # ../programs/wofi.nix # maybe swap with rofi??
     # ../programs/zoxide.nix

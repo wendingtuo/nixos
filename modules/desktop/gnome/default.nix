@@ -1,0 +1,55 @@
+{ pkgs, ... }:
+{
+  home.packages = with pkgs.gnomeExtensions; [
+    system-monitor
+    blur-my-shell
+    tiling-shell
+  ];
+
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/shell" = {
+        disable-user-extensions = false;
+        enabled-extensions = with pkgs.gnomeExtensions; [
+          blur-my-shell.extensionUuid
+          tiling-shell.extensionUuid
+          system-monitor.extensionUuid
+          user-themes.extensionUuid
+        ];
+        disabled-extensions = [
+          "dash-to-dock@micxgx.gmail.com"
+          "window-list@gnome-shell-extensions.gcampax.github.com"
+          "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
+          "light-style@gnome-shell-extensions.gcampax.github.com"
+          "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
+          "apps-menu@gnome-shell-extensions.gcampax.github.com"
+          "emoji-copy@felipeftn"
+          "native-window-placement@gnome-shell-extensions.gcampax.github.com"
+          "status-icons@gnome-shell-extensions.gcampax.github.com"
+        ];
+        favorite-apps = [
+          "org.gnome.Nautilus.desktop"
+          "kitty.desktop"
+          "firefox.desktop"
+          "obsidian.desktop"
+          "codium.desktop"
+          ]
+      };
+      "org/gnome/mutter".edge-tiling = false;
+      "org/gnome/mutter".dynamic-workspaces = true;
+
+      "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+      "org/gnome/desktop/wm/preferences".button-layout = ":minimize,maximize,close";
+      "org/gnome/desktop/session".idle-delay = lib.hm.gvariant.mkUint32 0; # disabled
+      "org/gnome/desktop/screensaver".lock-enabled = false;
+      "org/gnome/desktop/screensaver".lock-delay = lib.hm.gvariant.mkUint32 0; # disabled
+      "org/gnome/desktop/notifications".show-in-lock-screen = false;
+      "org/gnome/desktop/sound".event-sounds = false; # disables bell sound in all applications
+      "org/gnome/desktop/peripherals/mouse".accel-profile = "flat"; # disable mouse acceleration
+
+      "org/gtk/settings/file-chooser".show-hidden = true;
+      "org/gtk/settings/file-chooser".list-view = true;
+    };
+  };
+};

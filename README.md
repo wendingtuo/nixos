@@ -21,7 +21,7 @@ home-manager switch --flake .#user.hostname
 - [ ] firefox
   - [ ] sync -or-
   - [ ] bitwarden, raindrop, remove pocket, set good defaults
-- [ ] Wireguard default config
+- [x] Wireguard default config
 - [ ] vmshare
 - [ ] gnome extensions and gtk
   - [ ] Tiling Shell
@@ -38,7 +38,7 @@ home-manager switch --flake .#user.hostname
   - [ ] starship
   - [ ] tmux / zellij
 - [ ] obsidian setup
-- [ ] tailscale
+- [x] tailscale
 - [x] nextcloud setup
 - [x] fzf
 - [x] git
