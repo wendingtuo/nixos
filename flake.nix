@@ -41,7 +41,7 @@
           userConfig = users.${username};
           nixosModules = "${self}/modules/nixos";
         };
-        modules = [.hosts/${hostname}];
+        modules = [./hosts/${hostname}];
       };
 
     makeDarwinConfig = hostname: username:
