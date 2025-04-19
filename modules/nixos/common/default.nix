@@ -127,4 +127,10 @@
   # OpenSSH daemon
   services.openssh.enable = true;
 
+  # Tailscale
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+  };
+
 }

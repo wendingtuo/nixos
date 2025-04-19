@@ -19,7 +19,6 @@
     # ../programs/wofi.nix # maybe swap with rofi??
     # ../programs/zoxide.nix
     ../programs/zsh.nix
-    ../services/tailscale.nix
   ];
 
   # Nixpkgs configuration
@@ -57,6 +56,7 @@
       vscodium
       hyfetch
       obsidian
+      tailscale
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima

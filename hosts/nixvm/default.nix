@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     "${nixosModules}/common"
     "${nixosModules}/desktop/gnome"
+    "${nixosModules}/services/tailscale.nix"
   ];
 
   networking.hostName = hostname;
