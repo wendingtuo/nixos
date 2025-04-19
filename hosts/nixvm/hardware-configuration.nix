@@ -21,7 +21,7 @@
   fileSystems."/home/share" = {
     device = ".host:/";
     fsType = "fuse./run/current-system/sw/bin/vmhgfs-fuse";
-    options = ["umask=22" "uid=1000" "gid=100" "allow_other" "defaults" "auto_unmount" "no_fail"];
+    options = ["umask=22" "uid=1000" "gid=100" "allow_other" "defaults" "auto_unmount" "nofail"];
   };
 
   swapDevices = [ ];
