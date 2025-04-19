@@ -2,6 +2,7 @@
   home.shellAliases = {
     ".." = "cd ..";
     ff = "fastfetch";
+    hf = "hyfetch"
 
     # git
     gaa = "git add --all";

@@ -8,8 +8,8 @@
     ../programs/aliases.nix
     ../programs/bash.nix
     ../programs/btop.nix
-    # ../programs/fastfetch.nix
-    # ../programs/fzf.nix
+    ../programs/fastfetch.nix
+    ../programs/fzf.nix
     ../programs/git.nix
     ../programs/kitty.nix
     ../programs/nextcloud.nix
