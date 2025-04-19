@@ -1,5 +1,6 @@
 {
   pkgs,
+  self,
   userConfig,
   ...
 }: {
@@ -20,7 +21,7 @@
         if pkgs.stdenv.isDarwin
         then "/Users"
         else "/home"
-      }/${userConfig.name}/vmshare/${hostname}/screenshots";
+      }/${userConfig.name}/vmshare/screenshots";
       savePathFixed=true
       showDesktopNotification=false
       showHelp=false

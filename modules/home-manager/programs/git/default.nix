@@ -4,10 +4,10 @@
     enable = true;
     userName = userConfig.name;
     userEmail = userConfig.email;
-    signing = {
-      key = userConfig.gitKey;
-      signByDefault = true;
-    };
+    # signing = {
+    #   key = userConfig.gitKey;
+    #   signByDefault = true;
+    # };
     delta = {
       enable = true;
       options = {
