@@ -5,8 +5,8 @@
   ...
 }: {
   imports = [
-    # ../programs/bottom
-    # ../programs/btop
+     ../programs/bottom
+     ../programs/btop
     # ../programs/fastfetch
     # ../programs/flameshot
     # ../programs/fzf
