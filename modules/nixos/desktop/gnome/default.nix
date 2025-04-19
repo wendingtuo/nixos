@@ -10,10 +10,10 @@
 
   # Disable unwanted default GNOME applications
   environment.gnome.excludePackages = with pkgs; [
-    gedit
-    gnome-connections
-    gnome-console
-    gnome-photos
+    # gedit
+    # gnome-connections
+    # gnome-console
+    # gnome-photos
     gnome-tour
     snapshot
     atomix # puzzle game
@@ -22,19 +22,19 @@
     epiphany # web browser
     evince # document viewer
     geary # email reader
-    gnome-calendar
-    gnome-characters
-    gnome-clocks
-    gnome-contacts
-    gnome-disk-utility
-    gnome-font-viewer
-    gnome-logs
-    gnome-maps
-    gnome-music
-    gnome-shell-extensions
-    gnome-system-monitor
-    gnome-terminal
-    gnome-weather
+    # gnome-calendar
+    # gnome-characters
+    # gnome-clocks
+    # gnome-contacts
+    # gnome-disk-utility
+    # gnome-font-viewer
+    # gnome-logs
+    # gnome-maps
+    # gnome-music
+    # gnome-shell-extensions
+    # gnome-system-monitor
+    # gnome-terminal
+    # gnome-weather
     hitori # sudoku game
     iagno # go game
     simple-scan

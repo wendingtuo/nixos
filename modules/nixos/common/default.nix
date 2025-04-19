@@ -102,8 +102,10 @@
     killall
     mesa
     home-manager
+    docker
     docker-compose
     vscodium
+    kitty
     git
   ];
 
@@ -114,7 +116,7 @@
     rootless.setSocketVariable = true;
   };
 
-  # Zsh configuration
+  # Simple terminal configuration
   programs.zsh.enable = true;
 
   # Fonts configuration
