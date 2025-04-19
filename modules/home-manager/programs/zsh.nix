@@ -1,14 +1,12 @@
 {
   lib,
   pkgs,
-  shellAliases
   ...
 }: {
   # Zsh shell configuration
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    shellAliases = ${shellAliases};
     syntaxHighlighting.enable = true;
     initExtra = ''
     # kubectl auto-complete
