@@ -8,6 +8,7 @@
     "${nixosModules}/common"
     "${nixosModules}/desktop/gnome"
     "${nixosModules}/services/tailscale.nix"
+    "${nixosModules}/services/wireguard.nix"
   ];
 
   networking.hostName = hostname;
