@@ -1,7 +1,7 @@
 { nhModules, ... }: {
   imports = [
     "${nhModules}/common"
-    "${nhModules}/desktop/gnome"
+    # "${nhModules}/desktop/gnome"
   ];
 
   programs.home-manager.enable = true;

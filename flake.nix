@@ -77,12 +77,12 @@
     };
 
     darwinConfigurations = {
-      nixmac = makeDarwinConfig "nixmac" "blake";
+      # nixmac = makeDarwinConfig "nixmac" "blake";
     };
 
     homeConfigurations = {
       "blake@nixvm" = makeHomeConfig "x86_64-linux" "nixvm" "blake";
-      "blake@nixmac" = makeHomeConfig "aarch64-darwin" "nixmac" "blake";
+      # "blake@nixmac" = makeHomeConfig "aarch64-darwin" "nixmac" "blake";
     };
 
     overlays = import ./overlays {inherit inputs;};
