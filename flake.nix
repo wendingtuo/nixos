@@ -1,0 +1,90 @@
+{
+  description = "flake for blake";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "nixpkgs/nixos-24.11";
+    hardware.url = "github:nixos/nixos-hardware";
+    catppuccin.url = "github:catppuccin/nix";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = { 
+    self,
+    nixpkgs,
+    home-manager,
+    darwin,
+    catppuccin,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+
+    # User configuration
+    users = {
+      blake = {
+        name = "blake";
+        email = "bh.nixos@iasus.io";
+      };
+    };
+
+    makeNixosConfig = hostname: username:
+      nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs hostname;
+          userConfig = users.${username};
+          nixosModules = "${self}/modules/nixos";
+        };
+        modules = [.hosts/${hostname}];
+      };
+
+    makeDarwinConfig = hostname: username:
+      darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        specialArgs = {
+          inherit inputs outputs hostname;
+          userConfig = users.${username};
+        };
+        modules = [
+          ./hosts/${hostname}
+          home-manager.darwinModules.home-manager
+        ];
+      };
+
+    makeHomeConfig = system: username: hostname:
+      home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs {inherit system;};
+        extraSpecialArgs = {
+          inherit inuts outputs;
+          userConfig = users.${username};
+          nhModules = "${self}/modules/home-manager";
+        };
+        modules = [
+          .home/${username}/${hostname}
+          catppuccin.homeModules.catppuccin
+        ];
+      };
+
+  in {
+    nixosConfigurations = {
+      nixvm = makeNixosConfig "nixvm" "blake";
+    };
+
+    darwinConfigurations = {
+      nixmac = makeDarwinConfig "nixmac" "blake"
+    };
+
+    homeConfigurations = {
+      "blake@nixvm" = makeHomeConfig "x86_64-linux" "blake" "nixvm";
+    };
+
+    overlays = import ./overlays {inherit inputs;};
+
+  };
+}
