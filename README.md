@@ -39,7 +39,7 @@ home-manager switch --flake .#user.hostname
   - [ ] tmux / zellij
 - [ ] obsidian setup
 - [ ] tailscale
-- [ ] nextcloud setup
+- [x] nextcloud setup
 - [ ] fzf
 - [x] git
 - [x] ~~ripgrep, fd,~~ zoxide?

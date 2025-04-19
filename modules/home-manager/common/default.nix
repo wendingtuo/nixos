@@ -54,6 +54,7 @@
       ripgrep # rg for recursive file content search
       vscodium
       hyfetch
+      obsidian
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima
