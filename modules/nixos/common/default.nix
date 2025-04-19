@@ -91,6 +91,9 @@
   # Passwordless sudo
   security.sudo.wheelNeedsPassword = false;
 
+  # Enable VMWare Guest Utilities
+  virtualisation.vmware.guest.enable = true;
+
   # System packages
   environment.systemPackages = with pkgs; [
     gcc
