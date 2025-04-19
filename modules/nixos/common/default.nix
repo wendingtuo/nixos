@@ -102,7 +102,6 @@
     killall
     mesa
     home-manager
-    firefox
     docker-compose
     vscodium
     kitty
@@ -118,6 +117,7 @@
 
   # Simple terminal configuration
   programs.zsh.enable = true;
+  programs.firefox.enable = true;
 
   # Fonts configuration
   fonts.packages = with pkgs; [
