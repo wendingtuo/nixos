@@ -1,14 +1,5 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    gnome-tweaks
-    gnomeExtensions.system-monitor
-    # gnomeExtensions.blur-my-shell
-    gnomeExtensions.tiling-shell
-    gnomeExtensions.user-themes
-    gnomeExtensions.dash-to-dock
-  ];
-
   dconf = {
     enable = true;
     settings = {
