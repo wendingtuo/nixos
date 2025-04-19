@@ -2,7 +2,7 @@
   programs.git = {
     enable = true;
     userName = "blake";
-    userEmail = "blakehyatt@pm.me";
+    userEmail = "bh.nixos@iasus.io";
     extraConfig = {
       init.defaultBranch = "main";
     };
