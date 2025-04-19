@@ -5,16 +5,15 @@
   ...
 }: {
   imports = [
+    ../programs/bottom
     ../programs/btop
     ../programs/fastfetch
+    ../programs/flameshot
     ../programs/fzf
     ../programs/git
     ../programs/starship
     ../programs/tmux
     ../programs/zsh
-    ../scripts
-    ../services/easyeffects
-    ../services/ulauncher
   ];
 
   # Nixpkgs configuration
@@ -52,6 +51,7 @@
       python3
       ripgrep
       terraform
+      vscodium
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima

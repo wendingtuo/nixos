@@ -101,6 +101,7 @@
     gnumake
     killall
     mesa
+    home-manager
     docker-compose
     vscodium
     git
