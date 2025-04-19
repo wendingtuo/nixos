@@ -96,6 +96,8 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
+    wget
+    curl
     home-manager
     docker-compose
     vscodium

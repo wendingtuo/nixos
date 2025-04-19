@@ -46,6 +46,7 @@
       eza # alias to ls
       fd # alternative to find
       jq # query against json
+      tldr
       kubectl
       lazydocker # TUI for docker
       nh # customizations available
@@ -75,4 +76,5 @@
     flavor = "mocha";
     accent = "lavender";
   };
+  news.display = "silent";
 }
