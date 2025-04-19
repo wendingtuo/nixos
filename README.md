@@ -38,8 +38,8 @@ home-manager switch --flake .#user.hostname
 - [ ] tailscale
 - [ ] nextcloud setup
 - [ ] fzf
-- [ ] git
-- [ ] ripgrep, fd, zoxide?
-- [ ] btop, btm (bottom)
-- [ ] fastfetch? hyfetch?
+- [x] git
+- [ ] ~~ripgrep, fd,~~ zoxide?
+- [x] btop, btm (bottom)
+- [x] fastfetch? hyfetch?
 - [ ] spotify and spicetify?
