@@ -96,11 +96,6 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
-    gcc
-    glib
-    gnumake
-    killall
-    mesa
     home-manager
     docker-compose
     vscodium
