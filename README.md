@@ -8,6 +8,9 @@ home-manager switch --flake .#user.hostname
 
 #TODO
 - [ ] Additional DM (Sway? Hyprland?)
+- [ ] vscodium
+  - [ ] extensions
+  - [ ] customizations
 - [ ] Agenix key management
 - [ ] catppuccin / dracula theme
 - [ ] file manager
