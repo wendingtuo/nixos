@@ -28,5 +28,5 @@
       bindkey 'ć' fzf-cd-widget
     ''}
   '';
-  }
+  };
 }
