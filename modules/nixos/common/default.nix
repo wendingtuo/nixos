@@ -98,6 +98,8 @@
     killall
     mesa
     docker-compose
+    vscodium
+    git
   ];
 
   # Docker configuration
