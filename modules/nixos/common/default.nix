@@ -61,9 +61,6 @@
   # Enable network manager
   networking = {
     networkmanager.enable = true;
-    wg-quick.interfaces.home_vpn.configFile = [
-    "/vmshare/wireguard/home_vpn.conf"
-    ];
   };
 
   # Enable sound with pipewire.
