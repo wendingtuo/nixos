@@ -4,6 +4,8 @@
     system-monitor
     blur-my-shell
     tiling-shell
+    user-themes
+    dash-to-dock
   ];
 
   dconf = {
@@ -12,13 +14,13 @@
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = with pkgs.gnomeExtensions; [
-          blur-my-shell.extensionUuid
-          tiling-shell.extensionUuid
-          system-monitor.extensionUuid
-          user-themes.extensionUuid
+          "dash-to-dock@micxgx.gmail.com"
+          "blur-my-shell.extensionUuid"
+          "tiling-shell.extensionUuid"
+          "system-monitor@gnome-shell-extensions.gcampax.github.com"
+          "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
         disabled-extensions = [
-          "dash-to-dock@micxgx.gmail.com"
           "window-list@gnome-shell-extensions.gcampax.github.com"
           "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
           "light-style@gnome-shell-extensions.gcampax.github.com"
