@@ -19,6 +19,7 @@
     # ../programs/wofi.nix # maybe swap with rofi??
     # ../programs/zoxide.nix
     ../programs/zsh.nix
+    ../services/tailscale.nix
   ];
 
   # Nixpkgs configuration
