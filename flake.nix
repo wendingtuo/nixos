@@ -61,7 +61,7 @@
       home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {inherit system;};
         extraSpecialArgs = {
-          inherit inuts outputs;
+          inherit inputs outputs;
           userConfig = users.${username};
           nhModules = "${self}/modules/home-manager";
         };
@@ -77,7 +77,7 @@
     };
 
     darwinConfigurations = {
-      nixmac = makeDarwinConfig "nixmac" "blake"
+      nixmac = makeDarwinConfig "nixmac" "blake";
     };
 
     homeConfigurations = {
