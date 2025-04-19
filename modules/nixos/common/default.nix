@@ -63,7 +63,7 @@
     networkmanager.enable = true;
     wg-quick.interfaces.home_vpn.configFile = [
     "/vmshare/wireguard/home_vpn.conf"
-    ]
+    ];
   };
 
   # Enable sound with pipewire.
@@ -117,7 +117,7 @@
     rootless.setSocketVariable = true;
   };
 
-  # Simple terminal configuration
+  # Basic apps enabled
   programs.zsh.enable = true;
   programs.firefox.enable = true;
 
