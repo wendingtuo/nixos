@@ -82,6 +82,7 @@
 
     homeConfigurations = {
       "blake@nixvm" = makeHomeConfig "x86_64-linux" "blake" "nixvm";
+      "blake@nixmac" = makeHomeConfig "aarch64-darwin" "blake" "nixmac";
     };
 
     overlays = import ./overlays {inherit inputs;};
