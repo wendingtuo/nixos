@@ -5,15 +5,20 @@
   ...
 }: {
   imports = [
-     ../programs/btop.nix
-    # ../programs/fastfetch
-    # ../programs/flameshot
-    # ../programs/fzf
-     ../programs/git.nix
-    # ../programs/starship
-    # ../programs/tmux
-     ../programs/zoxide.nix
-    # ../programs/zsh
+    ../programs/aliases.nix
+    ../programs/bash.nix
+    ../programs/btop.nix
+    # ../programs/fastfetch.nix
+    # ../programs/fzf.nix
+    ../programs/git.nix
+    ../programs/kitty.nix
+    ../programs/nextcloud.nix
+    ../programs/spicetify.nix
+    # ../programs/starship.nix
+    # ../programs/tmux.nix
+    # ../programs/wofi.nix # maybe swap with rofi??
+    # ../programs/zoxide.nix
+    ../programs/zsh.nix
   ];
 
   # Nixpkgs configuration
