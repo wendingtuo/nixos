@@ -40,7 +40,7 @@ home-manager switch --flake .#user.hostname
 - [ ] obsidian setup
 - [ ] tailscale
 - [x] nextcloud setup
-- [ ] fzf
+- [x] fzf
 - [x] git
 - [x] ~~ripgrep, fd,~~ zoxide?
 - [x] btop, btm (bottom)

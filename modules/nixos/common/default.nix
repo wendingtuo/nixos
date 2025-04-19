@@ -102,7 +102,7 @@
     killall
     mesa
     home-manager
-    docker
+    firefox
     docker-compose
     vscodium
     kitty
