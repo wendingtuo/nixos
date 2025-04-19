@@ -22,7 +22,7 @@ home-manager switch --flake .#user.hostname
   - [ ] sync -or-
   - [ ] bitwarden, raindrop, remove pocket, set good defaults
 - [x] Wireguard default config
-- [ ] vmshare
+- [x] vmshare
 - [ ] gnome extensions and gtk
   - [ ] Tiling Shell
   - [ ] Open Bar
@@ -30,14 +30,14 @@ home-manager switch --flake .#user.hostname
   - [ ] Enhanced Overview
   - [ ] Dracula GTK
   - [ ] Dracula Cursor
-- [ ] gnome customizations
-  - [ ] disable lockscreen (power options?)
-  - [ ] dark theme
+- [x] gnome customizations
+  - [x] disable lockscreen (power options?)
+  - [x] dark theme
 - [ ] dotfiles
   - [ ] kitty
   - [ ] starship
   - [ ] tmux / zellij
-- [ ] obsidian setup
+- [x] obsidian setup
 - [x] tailscale
 - [x] nextcloud setup
 - [x] fzf
