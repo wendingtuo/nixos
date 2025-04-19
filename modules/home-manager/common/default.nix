@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-     ../programs/bottom
      ../programs/btop
     # ../programs/fastfetch
     # ../programs/flameshot
@@ -48,6 +47,7 @@
       python3
       ripgrep # rg for recursive file content search
       vscodium
+      hyfetch
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima
