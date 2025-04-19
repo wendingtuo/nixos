@@ -13,7 +13,7 @@
     ../programs/git.nix
     ../programs/kitty.nix
     ../programs/nextcloud.nix
-    ../programs/spicetify.nix
+    # ../programs/spicetify.nix
     # ../programs/starship.nix
     # ../programs/tmux.nix
     # ../programs/wofi.nix # maybe swap with rofi??
