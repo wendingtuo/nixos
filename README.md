@@ -30,6 +30,9 @@ home-manager switch --flake .#user.hostname
   - [ ] Enhanced Overview
   - [ ] Dracula GTK
   - [ ] Dracula Cursor
+- [ ] gnome customizations
+  - [ ] disable lockscreen (power options?)
+  - [ ] dark theme
 - [ ] dotfiles
   - [ ] kitty
   - [ ] starship
@@ -39,7 +42,7 @@ home-manager switch --flake .#user.hostname
 - [ ] nextcloud setup
 - [ ] fzf
 - [x] git
-- [ ] ~~ripgrep, fd,~~ zoxide?
+- [x] ~~ripgrep, fd,~~ zoxide?
 - [x] btop, btm (bottom)
 - [x] fastfetch? hyfetch?
 - [ ] spotify and spicetify?

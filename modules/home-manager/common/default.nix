@@ -5,13 +5,14 @@
   ...
 }: {
   imports = [
-     ../programs/btop
+     ../programs/btop.nix
     # ../programs/fastfetch
     # ../programs/flameshot
     # ../programs/fzf
-     ../programs/git
+     ../programs/git.nix
     # ../programs/starship
     # ../programs/tmux
+     ../programs/zoxide.nix
     # ../programs/zsh
   ];
 
