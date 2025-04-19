@@ -77,6 +77,7 @@
     extraGroups = ["networkmanager" "wheel" "docker"];
     isNormalUser = true;
     shell = pkgs.zsh;
+  };
 
   # PATH configuration
   environment.localBinInPath = true;
