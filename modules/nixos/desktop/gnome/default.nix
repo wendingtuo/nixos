@@ -2,16 +2,6 @@
   
   # Enable GNOME
   services.xserver.desktopManager.gnome.enable = true;
-  
-  # Add GNOME extensions
-  environment.systemPackages = with pkgs; [
-    gnome-tweaks
-    gnomeExtensions.system-monitor
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.tiling-shell
-    gnomeExtensions.user-themes
-    gnomeExtensions.dash-to-dock
-  ];
 
   # GNOME customisations
   services.gnome = {

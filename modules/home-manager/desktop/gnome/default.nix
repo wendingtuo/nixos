@@ -4,7 +4,7 @@ with lib.hm.gvariant; {
     "${nhModules}/desktop/gnome/gtk.nix"
   ];
 
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
     gnome-tweaks
     gnomeExtensions.system-monitor
     gnomeExtensions.blur-my-shell

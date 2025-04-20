@@ -8,9 +8,9 @@ home-manager switch --flake .#user.hostname
 
 #TODO
 - [ ] Additional DM (Sway? Hyprland?)
-- [ ] vscodium
-  - [ ] extensions
-  - [ ] customizations
+- [x] vscodium
+  - [x] extensions
+  - [x] customizations
 - [ ] Agenix key management
 - [ ] catppuccin / dracula theme
 - [ ] file manager
@@ -28,8 +28,8 @@ home-manager switch --flake .#user.hostname
   - [ ] Open Bar
   - [x] User Themes
   - [ ] Enhanced Overview
-  - [ ] Dracula GTK
-  - [ ] Dracula Cursor
+  - [x] Dracula GTK
+  - [x] Dracula Cursor
 - [x] gnome customizations
   - [x] disable lockscreen (power options?)
   - [x] dark theme
