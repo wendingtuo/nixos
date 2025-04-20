@@ -30,41 +30,41 @@
           # then have Firefox open on some other workspace.
           "widget.disable-workspace-management" = true;
         };
-          search = {
-            force = true;
-            default = "ddg";
-            order = [ "ddg" "google" ];
-            engines = {
-              "Nix Packages" = {
-                urls = [{
-                  template = "https://search.nixos.org/packages";
-                  params = [
-                    { name = "type"; value = "packages"; }
-                    { name = "query"; value = "{searchTerms}"; }
-                  ];
-                }];
-                icon = "https://search.nixos.org/images/nix-logo.png";
-                definedAliases = [ "@np" ];
-              };
-              "NixOS Wiki" = {
-                urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
-                icon = "https://nixos.wiki/favicon.png";
-                updateInterval = 24 * 60 * 60 * 1000; # every day
-                definedAliases = [ "@nw" ];
-              };
-              "bing".metaData.hidden = true;
-              "google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
+        search = {
+          force = true;
+          default = "ddg";
+          order = [ "ddg" "google" ];
+          engines = {
+            "Nix Packages" = {
+              urls = [{
+                template = "https://search.nixos.org/packages";
+                params = [
+                  { name = "type"; value = "packages"; }
+                  { name = "query"; value = "{searchTerms}"; }
+                ];
+              }];
+              icon = "https://search.nixos.org/images/nix-logo.png";
+              definedAliases = [ "@np" ];
             };
+            "NixOS Wiki" = {
+              urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
+              icon = "https://nixos.wiki/favicon.png";
+              updateInterval = 24 * 60 * 60 * 1000; # every day
+              definedAliases = [ "@nw" ];
+            };
+            "bing".metaData.hidden = true;
+            "google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
           };
-          extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
-            ublock-origin
-            bitwarden
-            darkreader
-            raindropio
-            tabliss
-            clearurls
-          ];
         };
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+          ublock-origin
+          bitwarden
+          darkreader
+          raindropio
+          tabliss
+          clearurls
+        ];
       };
+    };
   };
 }
