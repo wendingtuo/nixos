@@ -26,7 +26,6 @@
       # Mutter customizations
       "org/gnome/mutter".edge-tiling = false;
       "org/gnome/mutter".dynamic-workspaces = true;
-      "org/gnome/mutter/wayland" xwayland-disable-extension = "['Xtest']"
 
       # Desktop customizations
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
