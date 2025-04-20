@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   dconf = {
     enable = true;
@@ -30,9 +30,9 @@
       # Desktop customizations
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
       "org/gnome/desktop/wm/preferences".button-layout = ":minimize,maximize,close";
-      "org/gnome/desktop/session".idle-delay = 0; # disabled
+      "org/gnome/desktop/session".idle-delay = lib.hm.gvariant.mkUint32 (0); # disabled
       "org/gnome/desktop/screensaver".lock-enabled = false;
-      "org/gnome/desktop/screensaver".lock-delay = 0; # disabled
+      "org/gnome/desktop/screensaver".lock-delay = lib.hm.gvariant.mkUint32 (0); # disabled
       "org/gnome/desktop/notifications".show-in-lock-screen = false;
       "org/gnome/desktop/sound".event-sounds = false; # disables bell sound in all applications
       "org/gnome/desktop/peripherals/mouse".accel-profile = "flat"; # disable mouse acceleration
