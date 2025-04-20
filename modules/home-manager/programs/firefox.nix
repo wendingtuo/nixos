@@ -1,3 +1,4 @@
+{ inputs, pkgs, ... }:
 {
   programs.firefox = {
     enable = true;
@@ -60,7 +61,7 @@
               "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
             };
           };
-          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          extensions.packages = with inputs.firefox-addons; [
             ublock-origin
             bitwarden
             darkreader
