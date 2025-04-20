@@ -65,6 +65,7 @@ with lib.hm.gvariant; {
         outer-gaps = 4;
         enable-window-border = true;
         windows-border-width = 1;
+        quarter-tiling-threshold = lib.hm.gvariant.mkUint32 (10);
       };
 
       # Dash to Dock customizations
@@ -72,7 +73,7 @@ with lib.hm.gvariant; {
         dash-max-icon-size = 32;
         height-fraction = 60;
         dock-fixed = false;
-        intellihide-mode = "FOCUS_APPLICATION_WINDOWS";
+        intellihide-mode = "ALL_WINDOWS";
         dock-position = "BOTTOM";
         show-trash = false;
         click-action = "focus-minimize-or-appspread";
@@ -96,7 +97,6 @@ with lib.hm.gvariant; {
         "move-to-workspace-7" = ["<Super><Shift>7"];
         "move-to-workspace-8" = ["<Super><Shift>8"];
         "move-to-workspace-9" = ["<Super><Shift>9"];
-        "switch-applications" = ["<Super>Tab"];
         "switch-to-workspace-1" = ["<Super>1"];
         "switch-to-workspace-2" = ["<Super>2"];
         "switch-to-workspace-3" = ["<Super>3"];
@@ -109,22 +109,28 @@ with lib.hm.gvariant; {
         "toggle-fullscreen" = ["<Super>m"];
       };
     
-      # # Space Bar customizations
-      # "org/gnome/shell/extensions/space-bar/appearance" = {
-      #   "inactive-workspace-text-color" = "rgb(189, 147, 249)";
-      #   "workspace-margin" = 3;
-      #   "workspaces-bar-padding" = 3;
-      # };
-      # "org/gnome/shell/extensions/space-bar/behavior" = {
-      #   "scroll-wheel" = "panel";
-      #   "show-empty-workspaces" = false;
-      #   "smart-workspace-names" = false;
-      #   "toggle-overview" = false;
-      # };
-      # "org/gnome/shell/extensions/space-bar/shortcuts" = {
-      #   "enable-activate-workspace-shortcuts" = true;
-      #   "enable-move-to-workspace-shortcuts" = true;
-      # };
+      # Space Bar customizations
+      "org/gnome/shell/extensions/space-bar/appearance" = {
+        "inactive-workspace-text-color" = "rgb(189, 147, 249)";
+        "workspace-margin" = 3;
+        "workspaces-bar-padding" = 3;
+      };
+      "org/gnome/shell/extensions/space-bar/behavior" = {
+        "scroll-wheel" = "panel";
+        "show-empty-workspaces" = false;
+        "smart-workspace-names" = false;
+        "toggle-overview" = true;
+      };
+      "org/gnome/shell/extensions/space-bar/shortcuts" = {
+        "enable-activate-workspace-shortcuts" = true;
+        "enable-move-to-workspace-shortcuts" = true;
+      };
+
+      # Just Perfection customizations
+      "org/gnome/dekstop/extensions/just-perfection" = {
+        startup-status = 0;
+        theme = true;
+      };
     };
   };
 }
