@@ -55,6 +55,7 @@
       nh # customizations available
       ripgrep # rg for recursive file content search
       hyfetch # colorful system details fetcher
+      yazi # TUI file explorer
       
       # Containers and development
       kubectl
@@ -67,7 +68,7 @@
       
       # Apps and stuff
       obsidian
-      tailscale
+
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima

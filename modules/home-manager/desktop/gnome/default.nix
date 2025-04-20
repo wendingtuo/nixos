@@ -1,5 +1,18 @@
-{ pkgs, lib, ... }:
-{
+{ pkgs, lib, nhModules, ... }:
+with lib.hm.gvariant; {
+  imports = [
+    "${nhModules}/desktop/gnome/gtk.nix"
+  ];
+
+  environment.systemPackages = with pkgs; [
+    gnome-tweaks
+    gnomeExtensions.system-monitor
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.tiling-shell
+    gnomeExtensions.user-themes
+    gnomeExtensions.dash-to-dock
+  ];
+
   dconf = {
     enable = true;
     settings = {
@@ -26,9 +39,11 @@
       # Mutter customizations
       "org/gnome/mutter".edge-tiling = false;
       "org/gnome/mutter".dynamic-workspaces = true;
+      "org/gnome/mutter".center-new-windows = true;
 
       # Desktop customizations
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+      "org/gnome/desktop/interface".monospace-font-name = "JetBrainsMono Nerd Font 12";
       "org/gnome/desktop/wm/preferences".button-layout = ":minimize,maximize,close";
       "org/gnome/desktop/session".idle-delay = lib.hm.gvariant.mkUint32 (0); # disabled
       "org/gnome/desktop/screensaver".lock-enabled = false;
@@ -42,7 +57,6 @@
       "org/gtk/settings/file-chooser".list-view = true;
 
       # Tiling Shell customizations
-
       "org/gnome/sehll/extensions/tilingshell" = {
         inner-gaps = 4;
         outer-gaps = 4;
@@ -51,7 +65,6 @@
       };
 
       # Dash to Dock customizations
-
       "org/gnome/shell/extensions/dash-to-dock" = {
         dash-max-icon-size = 32;
         height-fraction = 60;
