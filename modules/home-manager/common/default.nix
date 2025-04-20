@@ -9,6 +9,7 @@
     ../programs/bash.nix
     ../programs/btop.nix
     ../programs/fastfetch.nix
+    ../programs/firefox.nix
     ../programs/fzf.nix
     ../programs/git.nix
     ../programs/kitty.nix
@@ -47,7 +48,7 @@
       eza # alias to ls
       fd # alternative to find
       jq # query against json
-      tldr
+      tldr # simplified manuals
       kubectl
       lazydocker # TUI for docker
       nh # customizations available
