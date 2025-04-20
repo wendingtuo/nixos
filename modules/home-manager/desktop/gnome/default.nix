@@ -29,8 +29,7 @@ with lib.hm.gvariant; {
           "just-perfection-desktop@just-perfection"
           "space-bar@luchrioh"
         ];
-        disabled-extensions = [
-        ];
+        disabled-extensions = [];
         favorite-apps = [
           "org.gnome.Nautilus.desktop"
           "kitty.desktop"
@@ -110,22 +109,22 @@ with lib.hm.gvariant; {
         "toggle-fullscreen" = ["<Super>m"];
       };
     
-    # Space Bar customizations
-    "org/gnome/shell/extensions/space-bar/appearance" = {
-      "inactive-workspace-text-color" = "rgb(154,153,150)";
-      "workspace-margin" = 3;
-      "workspaces-bar-padding" = 3;
-    };
-    "org/gnome/shell/extensions/space-bar/behavior" = {
-      "scroll-wheel" = "panel";
-      "show-empty-workspaces" = false;
-      "smart-workspace-names" = false;
-      "toggle-overview" = false;
-    };
-    "org/gnome/shell/extensions/space-bar/shortcuts" = {
-      "enable-activate-workspace-shortcuts" = true;
-      "enable-move-to-workspace-shortcuts" = true;
-    };
+      # # Space Bar customizations
+      # "org/gnome/shell/extensions/space-bar/appearance" = {
+      #   "inactive-workspace-text-color" = "rgb(189, 147, 249)";
+      #   "workspace-margin" = 3;
+      #   "workspaces-bar-padding" = 3;
+      # };
+      # "org/gnome/shell/extensions/space-bar/behavior" = {
+      #   "scroll-wheel" = "panel";
+      #   "show-empty-workspaces" = false;
+      #   "smart-workspace-names" = false;
+      #   "toggle-overview" = false;
+      # };
+      # "org/gnome/shell/extensions/space-bar/shortcuts" = {
+      #   "enable-activate-workspace-shortcuts" = true;
+      #   "enable-move-to-workspace-shortcuts" = true;
+      # };
     };
   };
 }
