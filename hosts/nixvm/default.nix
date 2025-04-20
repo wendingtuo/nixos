@@ -6,6 +6,7 @@
 
     ./hardware-configuration.nix
     "${nixosModules}/common"
+    "${nixosModules}/common/firefox.nix"
     "${nixosModules}/desktop/gnome"
     "${nixosModules}/services/tailscale.nix"
     "${nixosModules}/services/wireguard.nix"

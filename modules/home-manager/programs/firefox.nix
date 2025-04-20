@@ -5,6 +5,9 @@
     policies = {
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
+      DontCheckDefaultBrowser = true;
+      DisablePocket = true;
+      SearchBar = "unified";
     };
     profiles = {
       default = {
@@ -12,7 +15,7 @@
         name = "default";
         isDefault = true;
         settings = {
-          # "browser.startup.homepage" = "https://duckduckgo.com";
+          "browser.startup.homepage" = "https://search.nixos.org/packages";
           "browser.search.defaultenginename" = "DuckDuckGo";
           "browser.search.order.1" = "DuckDuckGo";
 
@@ -31,34 +34,6 @@
           # then have Firefox open on some other workspace.
           "widget.disable-workspace-management" = true;
         };
-        search = {
-          force = true;
-          default = "DuckDuckGo";
-          order = [ "DuckDuckGo" "Google" ];
-        };
-      };
-    };
-  }
-}
-
-{
-  programs.firefox = {
-    enable = true;
-    enableGnomeExtensions = true;
-    policies = {
-      DisableTelemetry = true;
-      DisableFirefoxStudies = true;
-    };
-    profiles = {
-        default = {
-          id = 0;
-          name = "default";
-          isDefault = true;
-          settings = {
-            "browser.startup.homepage" = "https://search.nixos.org/packages";
-            "browser.search.defaultenginename" = "DuckDuckGo";
-            "browser.search.order.1" = "DuckDuckGo";
-          };
           search = {
             force = true;
             default = "DuckDuckGo";
