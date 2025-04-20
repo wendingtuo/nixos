@@ -19,6 +19,7 @@
     ../programs/syncthing.nix
     # ../programs/tmux.nix
     # ../programs/wofi.nix # maybe swap with rofi??
+    ../programs/vscodium.nix
     # ../programs/zoxide.nix
     ../programs/zsh.nix
   ];
@@ -43,23 +44,30 @@
   # Ensure common packages are installed
   home.packages = with pkgs;
     [
+      
+      # Utilities
       dig # dns lookup util
       du-dust # rust based disk util
       eza # alias to ls
       fd # alternative to find
       jq # query against json
       tldr # simplified manuals
-      kubectl
-      lazydocker # TUI for docker
       nh # customizations available
+      ripgrep # rg for recursive file content search
+      hyfetch # colorful system details fetcher
+      
+      # Containers and development
+      kubectl
+      helm
+      minikube
+      docker-compose
+      lazydocker # TUI for docker
       pipenv
       python3
-      ripgrep # rg for recursive file content search
-      vscodium
-      hyfetch
+      
+      # Apps and stuff
       obsidian
       tailscale
-      nixos-icons
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima
