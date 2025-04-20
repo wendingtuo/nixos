@@ -22,6 +22,17 @@ in {
       DontCheckDefaultBrowser = true;
       DisablePocket = true;
       SearchBar = "unified";
+      DisplayBookmarksToolbar = "always";
+      EnableTrackingProtection = {
+        Value= true;
+        Locked = true;
+        Cryptomining = true;
+        Fingerprinting = true;
+      };
+      DisableFirefoxScreenshots = true;
+      OverrideFirstRunPage = "";
+      OverridePostUpdatePage = "";
+      DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
 
       Preferences = {
         # Privacy settings
@@ -44,10 +55,6 @@ in {
         };
         "jid1-MnnxcxisBPnSXQ@jetpack" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
-          installation_mode = "force_installed";
-        };
-        "extension@tabliss.io" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/3940751/tabliss-2.6.0.xpi";
           installation_mode = "force_installed";
         };
       };

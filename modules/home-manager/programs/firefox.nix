@@ -65,6 +65,8 @@
             bitwarden
             darkreader
             raindrop
+            tabliss
+            clearurls
           ];
         };
       };
