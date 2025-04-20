@@ -18,15 +18,15 @@ home-manager switch --flake .#user.hostname
   - nnn
   - mc (midnight commander)
 - [ ] zathura (pdf editor)
-- [ ] firefox
-  - [ ] sync -or-
-  - [ ] bitwarden, raindrop, remove pocket, set good defaults
+- [x] firefox
+  - [/] sync -or-
+  - [x] bitwarden, raindrop, remove pocket, set good defaults
 - [x] Wireguard default config
 - [x] vmshare
 - [ ] gnome extensions and gtk
-  - [ ] Tiling Shell
+  - [x] Tiling Shell
   - [ ] Open Bar
-  - [ ] User Themes
+  - [x] User Themes
   - [ ] Enhanced Overview
   - [ ] Dracula GTK
   - [ ] Dracula Cursor
