@@ -2,7 +2,6 @@
 {
   programs.firefox = {
     enable = true;
-    enableGnomeExtensions = true;
     policies = {
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
@@ -17,8 +16,8 @@
         isDefault = true;
         settings = {
           "browser.startup.homepage" = "https://search.nixos.org/packages";
-          "browser.search.defaultenginename" = "DuckDuckGo";
-          "browser.search.order.1" = "DuckDuckGo";
+          "browser.search.defaultenginename" = "ddg";
+          "browser.search.order.1" = "ddg";
 
           "signon.rememberSignons" = false;
           "widget.use-xdg-desktop-portal.file-picker" = 1;
@@ -37,8 +36,8 @@
         };
           search = {
             force = true;
-            default = "DuckDuckGo";
-            order = [ "DuckDuckGo" "Google" ];
+            default = "ddg";
+            order = [ "ddg" "google" ];
             engines = {
               "Nix Packages" = {
                 urls = [{
@@ -53,19 +52,19 @@
               };
               "NixOS Wiki" = {
                 urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
-                iconUpdateURL = "https://nixos.wiki/favicon.png";
+                icon = "https://nixos.wiki/favicon.png";
                 updateInterval = 24 * 60 * 60 * 1000; # every day
                 definedAliases = [ "@nw" ];
               };
-              "Bing".metaData.hidden = true;
-              "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
+              "bing".metaData.hidden = true;
+              "google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
             };
           };
-          extensions.packages = with inputs.firefox-addons; [
+          extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
             ublock-origin
             bitwarden
             darkreader
-            raindrop
+            raindropio
             tabliss
             clearurls
           ];
