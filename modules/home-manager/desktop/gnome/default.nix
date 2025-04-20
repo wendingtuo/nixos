@@ -7,7 +7,7 @@
         disable-user-extensions = false;
         enabled-extensions = with pkgs.gnomeExtensions; [
           "dash-to-dock@micxgx.gmail.com"
-          # "blur-my-shell.extensionUuid"
+          "blur-my-shell@aunetx"
           "tilingshell@ferrarodomenico.com"
           "system-monitor@gnome-shell-extensions.gcampax.github.com"
           "user-theme@gnome-shell-extensions.gcampax.github.com"
