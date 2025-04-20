@@ -43,7 +43,7 @@
                     { name = "query"; value = "{searchTerms}"; }
                   ];
                 }];
-                icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+                icon = "https://search.nixos.org/images/nix-logo.png";
                 definedAliases = [ "@np" ];
               };
               "NixOS Wiki" = {

@@ -59,6 +59,7 @@
       hyfetch
       obsidian
       tailscale
+      nixos-icons
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima
