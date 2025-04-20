@@ -24,6 +24,7 @@
     self,
     nixpkgs,
     home-manager,
+    firefox-addons,
     darwin,
     catppuccin,
     ...
