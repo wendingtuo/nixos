@@ -13,14 +13,6 @@
           "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
         disabled-extensions = [
-          # "window-list@gnome-shell-extensions.gcampax.github.com"
-          # "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
-          # "light-style@gnome-shell-extensions.gcampax.github.com"
-          # "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
-          # "apps-menu@gnome-shell-extensions.gcampax.github.com"
-          # "emoji-copy@felipeftn"
-          # "native-window-placement@gnome-shell-extensions.gcampax.github.com"
-          # "status-icons@gnome-shell-extensions.gcampax.github.com"
         ];
         favorite-apps = [
           "org.gnome.Nautilus.desktop"
@@ -30,9 +22,12 @@
           "codium.desktop"
           ];
       };
+
+      # Mutter customizations
       "org/gnome/mutter".edge-tiling = false;
       "org/gnome/mutter".dynamic-workspaces = true;
 
+      # Desktop customizations
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
       "org/gnome/desktop/wm/preferences".button-layout = ":minimize,maximize,close";
       "org/gnome/desktop/session".idle-delay = 0; # disabled
@@ -42,8 +37,32 @@
       "org/gnome/desktop/sound".event-sounds = false; # disables bell sound in all applications
       "org/gnome/desktop/peripherals/mouse".accel-profile = "flat"; # disable mouse acceleration
 
+      # Nautilus customizations
       "org/gtk/settings/file-chooser".show-hidden = true;
       "org/gtk/settings/file-chooser".list-view = true;
+
+      # Tiling Shell customizations
+
+      "org/gnome/sehll/extensions/tilingshell" = {
+        inner-gaps = 4;
+        outer-gaps = 4;
+        enable-window-border = true;
+        windows-border-width = 1;
+      };
+
+      # Dash to Dock customizations
+
+      "org/gnome/shell/extensions/dash-to-dock" = {
+        dash-max-icon-size = 32;
+        height-fraction = 60;
+        dock-fixed = false;
+        intellihide-mode = "FOCUS_APPLICATION_WINDOWS";
+        dock-position = "BOTTOM";
+        show-trash = false;
+        click-action = "focus-minimize-or-appspread";
+        custom-theme-shrink = true;
+        require-pressure-to-show = false;
+      };
     };
   };
 }
