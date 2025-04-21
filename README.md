@@ -9,8 +9,8 @@ or maybe `nix-shell -p git --command "nix run --experimental-features 'nix-comma
 
 
 # Manual Steps
-1. Login to Nextcloud
-2. Set up wireguard in networkmanager
+1. Set up wireguard in networkmanager
+2. Login to Nextcloud
 3. Login to firefox
 4. Set up syncthing and obsidian
 
