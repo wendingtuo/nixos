@@ -1,10 +1,12 @@
 ```sh
-nix-shell -p git
-git clone https://github.com/wendingtuo/nix-config.git
+nix-shell -p git --command "git clone https://github.com/wendingtuo/nix-config.git"
 cd nix-config
 sudo nixos-rebuild switch --impure --flake .#hostname
 home-manager switch --flake .#user@hostname
 ```
+
+or maybe `nix-shell -p git --command "nix run --experimental-features 'nix-command flakes' github:wendingtuo/nix-config"`?
+
 
 # Manual Steps
 1. Login to Nextcloud
