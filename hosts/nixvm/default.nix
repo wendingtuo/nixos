@@ -1,10 +1,6 @@
 { inputs, hostname, nixosModules, ... }: {
   imports = [
-    inputs.hardware.nixosModules.common-cpu-amd
-    inputs.hardware.nixosModules.common-gpu-amd
-    inputs.hardware.nixosModules.common-pc-ssd
-
-    ./hardware-configuration.nix
+    /etc/nixos/hardware-configuration.nix
     "${nixosModules}/common"
     "${nixosModules}/common/firefox.nix"
     "${nixosModules}/desktop/gnome"
