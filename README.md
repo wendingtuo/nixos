@@ -3,7 +3,7 @@ nix-shell -p git
 git clone https://github.com/wendingtuo/nix-config.git
 cd nix-config
 sudo nixos-rebuild switch --impure --flake .#hostname
-home-manager switch --flake .#user.hostname
+home-manager switch --flake .#user@hostname
 ```
 
 #TODO
