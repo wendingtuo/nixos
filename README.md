@@ -38,7 +38,7 @@ or maybe `nix-shell -p git --command "nix run --experimental-features 'nix-comma
   - [x] bitwarden, raindrop, remove pocket, set good defaults
 - [x] Wireguard default config
 - [x] vmshare
-- [ ] gnome extensions and gtk
+- [x] gnome extensions and gtk
   - [x] Tiling Shell
   - [x] User Themes
   - [x] Dracula GTK
