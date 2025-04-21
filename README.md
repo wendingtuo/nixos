@@ -6,18 +6,31 @@ sudo nixos-rebuild switch --impure --flake .#hostname
 home-manager switch --flake .#user@hostname
 ```
 
+# Manual Steps
+1. Login to Nextcloud
+2. Set up wireguard in networkmanager
+3. Login to firefox
+4. Set up syncthing and obsidian
+
+
 #TODO
 - [ ] Additional DM (Sway? Hyprland?)
+- [ ] Agenix key management
+- [ ] zathura (pdf editor)
+- [ ] dotfiles
+  - [ ] kitty
+  - [ ] starship
+  - [ ] tmux / zellij
+- [ ] gnome
+  - [ ] Open Bar
+- [ ] spotify and spicetify?
 - [x] vscodium
   - [x] extensions
   - [x] customizations
-- [ ] Agenix key management
-- [ ] catppuccin / dracula theme
-- [ ] file manager
+- [x] file manager | yazi
   - yazi
   - nnn
   - mc (midnight commander)
-- [ ] zathura (pdf editor)
 - [x] firefox
   - [/] sync -or-
   - [x] bitwarden, raindrop, remove pocket, set good defaults
@@ -25,18 +38,12 @@ home-manager switch --flake .#user@hostname
 - [x] vmshare
 - [ ] gnome extensions and gtk
   - [x] Tiling Shell
-  - [ ] Open Bar
   - [x] User Themes
-  - [ ] Enhanced Overview
   - [x] Dracula GTK
   - [x] Dracula Cursor
 - [x] gnome customizations
   - [x] disable lockscreen (power options?)
   - [x] dark theme
-- [ ] dotfiles
-  - [ ] kitty
-  - [ ] starship
-  - [ ] tmux / zellij
 - [x] obsidian setup
 - [x] tailscale
 - [x] nextcloud setup
@@ -45,4 +52,3 @@ home-manager switch --flake .#user@hostname
 - [x] ~~ripgrep, fd,~~ zoxide?
 - [x] btop, btm (bottom)
 - [x] fastfetch? hyfetch?
-- [ ] spotify and spicetify?
