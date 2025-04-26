@@ -1,9 +1,5 @@
+{ utputs, userConfig, pkgs, ... }: 
 {
-  outputs,
-  userConfig,
-  pkgs,
-  ...
-}: {
   imports = [
     ../programs/aliases.nix
     ../programs/bash.nix

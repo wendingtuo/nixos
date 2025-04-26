@@ -1,11 +1,18 @@
 { pkgs, ... }: {
   
   # Enable GNOME
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # GNOME customisations
-  services.gnome = {
-    gnome-browser-connector.enable = true;
+  services = {
+    displayManager.gdm.enable = true;
+    xserver.desktopManager.gnome.enable = true; # Enable gnome desktop
+    gnome.gnome-browser-connector.enable = true; # Gnome customizations
+    # Enable pipewire sound, disable pulseaudio
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
   };
 
   # Disable unwanted default GNOME applications

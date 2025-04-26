@@ -31,14 +31,10 @@
     useOSProber = true;
   };
 
-  # Enable X11 & GDM
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    xkb = {
-      layout = "us";
-      variant = "";
-    };
+  # Set keyboard layout
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
   };
 
   # Set your time zone.
@@ -101,7 +97,6 @@
     wget
     curl
     home-manager
-    docker-compose
     vscodium
     kitty
     git
