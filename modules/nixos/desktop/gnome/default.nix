@@ -5,7 +5,8 @@
     xserver.displayManager.gdm.enable = true;
     xserver.desktopManager.gnome.enable = true; # Enable gnome desktop
     gnome.gnome-browser-connector.enable = true; # Gnome customizations
-    # Enable pipewire sound, disable pulseaudio
+    # Enable pipewire, disable pulseaudio
+    security.rtkit.enable = true;
     pulseaudio.enable = false;
     pipewire = {
       enable = true;
