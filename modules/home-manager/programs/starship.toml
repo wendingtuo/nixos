@@ -78,7 +78,7 @@ Artix = "󰣇"
 CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
-Nixos = "❄️"
+NixOS = "❄️"
 RedHatEnterprise = "󱄛"
 
 [username]
