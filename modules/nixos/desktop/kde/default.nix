@@ -9,7 +9,6 @@
     desktopManager.plasma6.enable = true;
 
     # Enable pulse audio, disable pipewire
-    security.rtkit.enable = true;
     pulseaudio.enable = true;
     pipewire = {
       enable = true;
@@ -18,6 +17,7 @@
       pulse.enable = true;
     };
   };
+  security.rtkit.enable = true;
 
   # Remove default KDE packages
   environment.plasma6.excludePackages = [
