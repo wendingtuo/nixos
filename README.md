@@ -31,6 +31,7 @@ or maybe `nix-shell -p git --command "nix run --experimental-features 'nix-comma
   - [x] customizations
 - [x] file manager | yazi
   - yazi
+    - dracula theme
   - nnn
   - mc (midnight commander)
 - [x] firefox
