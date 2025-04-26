@@ -81,6 +81,10 @@
       nixvm = makeNixosConfig "nixvm" "blake";
     };
 
+    nixosConfigurations = {
+      nixvm-kde = makeNixosConfig "nixvm-kde" "blake";
+    };
+
     darwinConfigurations = {
       # nixmac = makeDarwinConfig "nixmac" "blake";
     };

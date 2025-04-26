@@ -10,12 +10,7 @@
 
     # Enable pulse audio, disable pipewire
     pulseaudio.enable = true;
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
+    pipewire.enable = false;
   };
   security.rtkit.enable = true;
 
