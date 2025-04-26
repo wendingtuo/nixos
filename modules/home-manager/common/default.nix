@@ -11,7 +11,7 @@
     ../programs/kitty.nix
     ../programs/nextcloud.nix
     # ../programs/spicetify.nix
-    # ../programs/starship.nix
+    ../programs/starship.nix
     ../programs/syncthing.nix
     # ../programs/tmux.nix
     ../programs/vscodium.nix
@@ -50,11 +50,12 @@
       ripgrep # rg for recursive file content search
       hyfetch # colorful system details fetcher
       yazi # TUI file explorer
+      zellij
       
       # Containers and development
-      # kubectl
-      # kubernetes-helm
-      # minikube
+      kubectl
+      kubernetes-helm
+      minikube
       docker-compose
       lazydocker # TUI for docker
       pipenv

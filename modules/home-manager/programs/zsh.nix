@@ -22,6 +22,7 @@
     autoload -z edit-command-line
     zle -N edit-command-line
     bindkey "^v" edit-command-line
+    eval "$(starship init zsh)"
 
     ${lib.optionalString pkgs.stdenv.hostPlatform.isDarwin ''
       # Enable ALT-C fzf keybinding on Mac
