@@ -2,7 +2,7 @@
   
   # Enable GNOME
   services = {
-    displayManager.gdm.enable = true;
+    xserver.displayManager.gdm.enable = true;
     xserver.desktopManager.gnome.enable = true; # Enable gnome desktop
     gnome.gnome-browser-connector.enable = true; # Gnome customizations
     # Enable pipewire sound, disable pulseaudio
