@@ -54,7 +54,7 @@
       
       # Containers and development
       kubectl
-      helm
+      kubernetes-helm
       minikube
       docker-compose
       lazydocker # TUI for docker

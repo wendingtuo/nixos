@@ -62,7 +62,7 @@
         ];
       };
 
-    makeHomeConfig = system: hostname: username:
+    makeHomeConfig = system: desktop: username:
       home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {inherit system;};
         extraSpecialArgs = {
@@ -71,7 +71,7 @@
           nhModules = "${self}/modules/home-manager";
         };
         modules = [
-          ./home/${username}/${hostname}
+          ./home/${username}/${desktop}
           catppuccin.homeModules.catppuccin
         ];
       };
@@ -90,7 +90,8 @@
     };
 
     homeConfigurations = {
-      "blake@nixvm" = makeHomeConfig "x86_64-linux" "nixvm" "blake";
+      "blake@gnome" = makeHomeConfig "x86_64-linux" "gnome" "blake";
+      "blake@kde" = makeHomeConfig "x86_64-linux" "kde" "blake";
       # "blake@nixmac" = makeHomeConfig "aarch64-darwin" "nixmac" "blake";
     };
 
