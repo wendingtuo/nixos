@@ -7,6 +7,7 @@
     # "${nixosModules}/desktop/kde"
     # "${nixosModules}/services/tailscale.nix"
     # "${nixosModules}/services/wireguard.nix"
+    # "${nixosModules}/services/sops.nix"
   ];
 
   networking.hostName = hostname;

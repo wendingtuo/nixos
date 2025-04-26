@@ -1,4 +1,4 @@
-{ utputs, userConfig, pkgs, ... }: 
+{ outputs, userConfig, pkgs, ... }: 
 {
   imports = [
     ../programs/aliases.nix
@@ -14,7 +14,6 @@
     # ../programs/starship.nix
     ../programs/syncthing.nix
     # ../programs/tmux.nix
-    # ../programs/wofi.nix # maybe swap with rofi??
     ../programs/vscodium.nix
     # ../programs/zoxide.nix
     ../programs/zsh.nix

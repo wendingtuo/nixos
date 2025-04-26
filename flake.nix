@@ -6,6 +6,7 @@
     nixpkgs-stable.url = "nixpkgs/nixos-24.11";
     hardware.url = "github:nixos/nixos-hardware";
     catppuccin.url = "github:catppuccin/nix";
+    inputs.sops-nix.url = "github:Mic92/sops-nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,6 +28,7 @@
     firefox-addons,
     darwin,
     catppuccin,
+    sops-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;
