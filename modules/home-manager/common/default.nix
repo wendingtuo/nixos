@@ -46,15 +46,15 @@
       fd # alternative to find
       jq # query against json
       tldr # simplified manuals
-      nh # customizations available
+      nh # customizations available 
       ripgrep # rg for recursive file content search
       hyfetch # colorful system details fetcher
       yazi # TUI file explorer
       
       # Containers and development
-      kubectl
-      kubernetes-helm
-      minikube
+      # kubectl
+      # kubernetes-helm
+      # minikube
       docker-compose
       lazydocker # TUI for docker
       pipenv
