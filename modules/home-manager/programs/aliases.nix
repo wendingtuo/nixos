@@ -4,6 +4,10 @@
     ff = "fastfetch";
     hf = "hyfetch";
 
+    # nixos
+    nrsf = "nixos-rebuild switch --impure --flake";
+    hmsf = "home-manager switch --flake";
+
     # git
     gaa = "git add --all";
     gcam = "git commit --all --message";

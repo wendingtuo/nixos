@@ -44,7 +44,6 @@
   # Ensure common packages are installed
   home.packages = with pkgs;
     [
-      
       # Utilities
       dig # dns lookup util
       du-dust # rust based disk util
@@ -68,7 +67,6 @@
       
       # Apps and stuff
       obsidian
-
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima
@@ -81,7 +79,6 @@
       pulseaudio
       tesseract #OCR engine
       unzip
-      wl-clipboard
     ];
 
   # Catpuccin flavor and accent

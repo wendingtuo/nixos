@@ -25,12 +25,12 @@
     # gnome-calendar
     # gnome-characters
     # gnome-clocks
-    # gnome-contacts
+    gnome-contacts
     # gnome-disk-utility
     # gnome-font-viewer
     # gnome-logs
-    # gnome-maps
-    # gnome-music
+    gnome-maps
+    gnome-music
     # gnome-shell-extensions
     # gnome-system-monitor
     # gnome-terminal

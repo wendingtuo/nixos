@@ -42,7 +42,7 @@ with lib.hm.gvariant; {
       # Mutter customizations
       "org/gnome/mutter".edge-tiling = false;
       "org/gnome/mutter".dynamic-workspaces = true;
-      "org/gnome/mutter".center-new-windows = true;
+      "org/gnome/mutter".center-new-windows = false;
 
       # Desktop customizations
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
