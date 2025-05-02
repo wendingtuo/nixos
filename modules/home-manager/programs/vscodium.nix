@@ -25,7 +25,7 @@
       #   editor.fontFamily = "\"JetBrainsMono Nerd Font\", \"JetBrainsMono Nerd Font\"";
       #   workbench.colorTheme = "Dracula Theme";
       #   git.enableSmartCommit = true;
-      };
+      # };
     };
   };
 }
