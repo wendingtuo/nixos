@@ -63,6 +63,8 @@
       
       # Apps and stuff
       obsidian
+      alacritty
+      tmux
     ]
     ++ lib.optionals stdenv.isDarwin [
       colima
