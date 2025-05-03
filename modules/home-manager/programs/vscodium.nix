@@ -6,7 +6,9 @@
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         jnoortheen.nix-ide
+        Catppuccin.catppuccin-vsc
         dracula-theme.theme-dracula
+        tamasfe.even-better-toml
         redhat.vscode-yaml
         redhat.ansible
         ms-azuretools.vscode-docker
@@ -21,11 +23,6 @@
       #     sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
       #   }
       ];
-      # userSettings = {
-      #   editor.fontFamily = "\"JetBrainsMono Nerd Font\", \"JetBrainsMono Nerd Font\"";
-      #   workbench.colorTheme = "Dracula Theme";
-      #   git.enableSmartCommit = true;
-      # };
     };
   };
 }

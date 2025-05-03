@@ -23,8 +23,8 @@
         exit 0
       fi
 
-      # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up -authkey tskey-auth-kKkGjxcQMi11CNTRL-E3mjuWVARg1kd6t97ugrg1TXhKjumNAt
+      # otherwise authenticate with tailscale one-time key (replace <authkey> on new system)
+      ${tailscale}/bin/tailscale up -authkey tskey-auth-<authkey>
     '';
   };
 }
