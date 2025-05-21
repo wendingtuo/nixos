@@ -73,7 +73,7 @@
           nhModules = "${self}/modules/home-manager";
         };
         modules = [
-          ./home/${username}/${desktop}
+          ./home/${desktop}
           catppuccin.homeModules.catppuccin
         ];
       };
@@ -83,18 +83,13 @@
       nixvm = makeNixosConfig "nixvm" "blake";
     };
 
-    nixosConfigurations = {
-      nixvm-kde = makeNixosConfig "nixvm-kde" "blake";
-    };
-
     darwinConfigurations = {
       # nixmac = makeDarwinConfig "nixmac" "blake";
     };
 
     homeConfigurations = {
-      "blake@gnome" = makeHomeConfig "x86_64-linux" "gnome" "blake";
-      "blake@kde" = makeHomeConfig "x86_64-linux" "kde" "blake";
-      # "blake@nixmac" = makeHomeConfig "aarch64-darwin" "nixmac" "blake";
+      "nixvm" = makeHomeConfig "x86_64-linux" "gnome" "blake";
+      # "nixmac" = makeHomeConfig "aarch64-darwin" "macos" "blake";
     };
 
     overlays = import ./overlays {inherit inputs;};
