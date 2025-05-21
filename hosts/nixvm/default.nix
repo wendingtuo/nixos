@@ -4,9 +4,8 @@
     "${nixosModules}/common"
     "${nixosModules}/common/firefox.nix"
     "${nixosModules}/desktop/gnome"
-    # "${nixosModules}/desktop/kde"
     # "${nixosModules}/services/tailscale.nix"
-    # "${nixosModules}/services/wireguard.nix"
+    "${nixosModules}/services/wireguard.nix"
     # "${nixosModules}/services/sops.nix"
   ];
 

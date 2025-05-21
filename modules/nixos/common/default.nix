@@ -117,5 +117,4 @@
     enable = true;
     useRoutingFeatures = "client";
   };
-
 }
