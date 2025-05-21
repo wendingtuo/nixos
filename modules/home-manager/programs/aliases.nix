@@ -6,7 +6,7 @@
 
     # nixos
     nixvm-up = "sudo nixos-rebuild switch --impure --flake .#nixvm";
-    home-up = "sudo home-manager switch --flake";
+    home-up = "home-manager switch --flake";
 
     # git
     gaa = "git add --all";
