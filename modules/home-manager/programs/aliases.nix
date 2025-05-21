@@ -5,8 +5,8 @@
     hf = "hyfetch";
 
     # nixos
-    nixos-up = "nixos-rebuild switch --impure --flake";
-    home-up = "home-manager switch --flake";
+    nixvm-up = "sudo nixos-rebuild switch --impure --flake .#nixvm";
+    home-up = "sudo home-manager switch --flake";
 
     # git
     gaa = "git add --all";
