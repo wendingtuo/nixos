@@ -8,7 +8,7 @@
     enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
-    initExtra = ''
+    initContent = ''
     # kubectl auto-complete
     source <(kubectl completion zsh)
 
