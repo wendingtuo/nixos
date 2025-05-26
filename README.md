@@ -5,14 +5,12 @@ sudo nixos-rebuild switch --impure --flake .#nixvm
 home-manager switch --flake .#nixvm
 ```
 
-or maybe `nix-shell -p git --command "nix run --experimental-features 'nix-command flakes' github:wendingtuo/nix-config"`?
-
-
 # Manual Steps
-1. Set up wireguard in networkmanager
-2. Login to Nextcloud
-3. Login to firefox
-4. Set up syncthing and obsidian
+1. Modify /etc/nixos/hardware-configuration to include shares for vmware
+2. Set up wireguard in networkmanager
+3. Login to Nextcloud
+4. Login to firefox
+5. Set up syncthing and obsidian
 
 
 #TODO
