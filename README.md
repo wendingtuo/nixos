@@ -1,8 +1,8 @@
 ```sh
-nix-shell -p git --command "git clone https://github.com/wendingtuo/nix-config.git"
-cd nix-config
-sudo nixos-rebuild switch --impure --flake .#hostname
-home-manager switch --flake .#user@hostname
+nix-shell -p git --command "git clone https://github.com/wendingtuo/nixos.git"
+cd nixos
+sudo nixos-rebuild switch --impure --flake .#nixvm
+home-manager switch --flake .#nixvm
 ```
 
 or maybe `nix-shell -p git --command "nix run --experimental-features 'nix-command flakes' github:wendingtuo/nix-config"`?
