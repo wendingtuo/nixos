@@ -1,3 +1,5 @@
+Initialization:
+
 ```sh
 nix-shell -p git --command "git clone https://github.com/wendingtuo/nixos.git"
 cd nixos
