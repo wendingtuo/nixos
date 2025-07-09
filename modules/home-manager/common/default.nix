@@ -10,7 +10,7 @@
     ../programs/git.nix
     ../programs/kitty.nix
     ../programs/nextcloud.nix
-    # ../programs/spicetify.nix
+    ../programs/spicetify.nix
     ../programs/starship.nix
     ../programs/syncthing.nix
     # ../programs/tmux.nix
@@ -40,6 +40,7 @@
   home.packages = with pkgs;
     [
       # Utilities
+      bash
       dig # dns lookup util
       du-dust # rust based disk util
       eza # alias to ls
@@ -58,12 +59,13 @@
       minikube
       docker-compose
       lazydocker # TUI for docker
+      lazygit
       pipenv
       python3
       
       # Apps and stuff
       obsidian
-      alacritty
+      ghostty
       tmux
     ]
     ++ lib.optionals stdenv.isDarwin [

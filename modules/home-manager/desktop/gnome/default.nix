@@ -1,7 +1,7 @@
 { pkgs, lib, nhModules, ... }:
 with lib.hm.gvariant; {
   imports = [
-    "${nhModules}/desktop/gnome/dracula.nix"
+    #"${nhModules}/desktop/gnome/dracula.nix"
   ];
 
   home.packages = with pkgs; [
