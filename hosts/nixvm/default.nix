@@ -5,7 +5,7 @@
     "${nixosModules}/common/firefox.nix"
     "${nixosModules}/desktop/gnome"
     # "${nixosModules}/services/tailscale.nix"
-    "${nixosModules}/services/wireguard.nix"
+    # "${nixosModules}/services/wireguard.nix"
     # "${nixosModules}/services/sops.nix"
   ];
 
