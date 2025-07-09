@@ -88,7 +88,7 @@
     curl
     home-manager
     vscodium
-    kitty
+    ghostty
     git
   ];
 
