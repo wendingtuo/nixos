@@ -1,14 +1,20 @@
 {userConfig, ...}: {
-  programs.git = {
-    enable = true;
-    userName = userConfig.name;
-    userEmail = userConfig.email;
+  programs = {
+    git = {
+      enable = true;
+      settings = {
+        user.name = userConfig.name;
+        user.email = userConfig.email;
+        pull.rebase = "true";
+        init.defaultBranch = "main";
+      };
+    };
     # signing = {
     #   key = userConfig.gitKey;
     #   signByDefault = true;
     # };
     delta = {
-      enable = true;
+      enableGitIntegration = true;
       options = {
         keep-plus-minus-markers = true;
         light = false;
@@ -16,10 +22,6 @@
         navigate = true;
         width = 280;
       };
-    };
-    extraConfig = {
-      pull.rebase = "true";
-      init.defaultBranch = "main";
     };
   };
 

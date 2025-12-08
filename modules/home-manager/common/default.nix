@@ -2,7 +2,7 @@
 {
   imports = [
     ../programs/aliases.nix
-    ../programs/bash.nix
+    #../programs/bash.nix
     ../programs/btop.nix
     ../programs/fastfetch.nix
     ../programs/firefox.nix
@@ -10,7 +10,7 @@
     ../programs/git.nix
     ../programs/kitty.nix
     ../programs/nextcloud.nix
-    ../programs/spicetify.nix
+    #../programs/spicetify.nix
     ../programs/starship.nix
     ../programs/syncthing.nix
     # ../programs/tmux.nix
@@ -42,7 +42,7 @@
       # Utilities
       bash
       dig # dns lookup util
-      du-dust # rust based disk util
+      dust # rust based disk util
       eza # alias to ls
       fd # alternative to find
       jq # query against json
