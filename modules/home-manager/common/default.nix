@@ -52,6 +52,7 @@
       hyfetch # colorful system details fetcher
       yazi # TUI file explorer
       zellij
+      tree
       
       # Containers and development
       kubectl

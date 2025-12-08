@@ -24,7 +24,7 @@
       fi
 
       # otherwise authenticate with tailscale one-time key (replace <authkey> on new system)
-      ${tailscale}/bin/tailscale up -authkey <authkey>
+      # ${tailscale}/bin/tailscale up -authkey <authkey>
     '';
   };
 }
