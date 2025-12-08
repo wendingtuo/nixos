@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 {
-    # create a oneshot job to authenticate to Tailscale
+  # create a oneshot job to authenticate to Tailscale
   systemd.services.tailscale-autoconnect = {
     description = "Automatic connection to Tailscale";
 
@@ -24,7 +24,7 @@
       fi
 
       # otherwise authenticate with tailscale one-time key (replace <authkey> on new system)
-      ${tailscale}/bin/tailscale up -authkey tskey-auth-<authkey>
+      ${tailscale}/bin/tailscale up -authkey <authkey>
     '';
   };
 }
