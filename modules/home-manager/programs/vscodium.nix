@@ -7,10 +7,9 @@
       extensions = with pkgs.vscode-extensions; [
         jnoortheen.nix-ide
         catppuccin.catppuccin-vsc
-        dracula-theme.theme-dracula
+        # dracula-theme.theme-dracula
         tamasfe.even-better-toml
         redhat.vscode-yaml
-        redhat.ansible
       ];
     };
   };
